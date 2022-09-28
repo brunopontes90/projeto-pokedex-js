@@ -1,0 +1,7 @@
+.img-pokemon{
+    width: 150px;
+    height: 150px;
+    border: 3px solid;
+    border-radius: 5px;
+    border-color: orange;
+}

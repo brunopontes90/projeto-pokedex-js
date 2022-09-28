@@ -1,4 +1,5 @@
 import React from "react";
+import "./ListPokemon.css";
 import { Link } from "react-router-dom";
 
 function ListUsers(props) {
@@ -7,61 +8,35 @@ function ListUsers(props) {
     const handleUserList = () => {
         return typeof listUsers !== "undefined" && listUsers.map((data, index) => {
             return (
-                <tbody key={index}>
-                    <tr className="text-center">
-                        <th scope="row">#{data.idpokemon}</th>
-                        <td>{data.nomepokemon}</td>
-                        <td>{data.tipopokemon}</td>
-                        <td>
-                            <img
-                                width={150}
-                                src={data.imagempokemon}
-                            />
-                        </td>
-                        <td>
-                            <div>
-                                <button
-                                    className="btn btn-primary mr-3"
-                                    onClick={() => handleEdit()}
-                                >
-                                    Editar
-                                </button>
-                                <button
-                                    className="btn btn-danger"
-                                    onClick={() => handleDelete()}
-                                >
-                                    Excluir
-                                </button>
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
+                <div className="">
+                    <div className="">
+                        <img
+                            src={data.imagempokemon}
+                            className="img-pokemon"
+                        />
+                    </div>
+                    <div className="d-flex ml-4">
+                        <p className="">#{data.idpokemon}</p>
+                        <p>{data.nomepokemon}</p>
+                    </div>
+                    <div className="">
+                        <p>{data.tipopokemon}</p>
+                    </div>
+                </div>
             );
         })
     }
     return (
-        <div>
-            <div className="d-flex justify-content-around">
-                <div className="ml-5">
-                    <h1 className="ml-5">Usuários</h1>
+        <div className="container-fluid">
+            <div className="ml-5 d-flex justify-content-center">
+                <div className="">
+                    <h1 className="">Pokémon</h1>
                 </div>
-                <div className="mt-2">
+                <div className="mt-2 ml-5">
                     <Link to={"/create"} className="btn btn-success">+</Link>
                 </div>
             </div>
-            <table className="table">
-                <thead className="thead-dark text-center">
-                    <tr>
-                        <th scope="col">Numero Pokedex</th>
-                        <th scope="col">Nome</th>
-                        <th scope="col">Tipo</th>
-                        <th scope="col">Imagem</th>
-                        <th scope="col">Ação</th>
-                    </tr>
-                </thead>
-                {handleUserList()}
-            </table>
-
+            {handleUserList()}
         </div>
     )
 }
