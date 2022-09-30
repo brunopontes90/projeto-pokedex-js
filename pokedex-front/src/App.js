@@ -48,7 +48,7 @@ function App() {
   }
 
   return (
-    <div className="m-2">
+    <div className="">
       {/* <ListPokemon
         listPokemon={listPokemon}
         handleDelete={handleDelete}
