@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
 import Axios from "axios";
-import ListUsers from "./Components/List/ListUsers";
+import ListPokemon from "./Components/List/ListPokemon";
 import axios from "axios";
+import Menu from "./Components/Layouts/Menu/Menu";
 
 function App() {
   const [values, setValues] = useState();
-  const [listUsers, setListUsers] = useState();
-
-  console.log("Pokemon: " + listUsers)
+  const [listPokemon, setListPokemon] = useState();
 
   const handleChangeValue = (value) => {
     setValues((prevValue) => ({
@@ -19,7 +18,7 @@ function App() {
   // PEGANDO OS DADOS;
   useEffect(() => {
     Axios.get("http://localhost:3001/")
-      .then((response) => { setListUsers(response.data) });
+      .then((response) => { setListPokemon(response.data) });
   });
 
   // BOTÃO PARA ENVIAR OS DADOS
@@ -45,16 +44,17 @@ function App() {
   }
 
   const handleDelete = () => {
-    axios.delete(`http://localhost:3001/delete/${listUsers.id}`);
+    axios.delete(`http://localhost:3001/delete/${listPokemon.id}`);
   }
 
   return (
     <div className="m-2">
-      <ListUsers
-        listUsers={listUsers}
+      {/* <ListPokemon
+        listPokemon={listPokemon}
         handleDelete={handleDelete}
         handleEdit={handleEdit}
-      />
+      /> */}
+      <Menu/>
     </div>
   );
 }

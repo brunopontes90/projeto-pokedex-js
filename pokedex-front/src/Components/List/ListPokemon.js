@@ -2,11 +2,11 @@ import React from "react";
 import "./ListPokemon.css";
 import { Link } from "react-router-dom";
 
-function ListUsers(props) {
-    const { listUsers, handleDelete, handleEdit } = props;
+function ListPokemon(props) {
+    const { listPokemon, handleDelete, handleEdit } = props;
 
     const handleUserList = () => {
-        return typeof listUsers !== "undefined" && listUsers.map((data, index) => {
+        return typeof listPokemon !== "undefined" && listPokemon.map((data, index) => {
             return (
                 <div className="">
                     <div className="">
@@ -41,4 +41,4 @@ function ListUsers(props) {
     )
 }
 
-export default ListUsers;
+export default ListPokemon;
