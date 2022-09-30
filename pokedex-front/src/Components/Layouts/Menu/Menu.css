@@ -1,5 +1,16 @@
 .img-logo {
     height: 90px;
     width: 150px;
-    padding: 0px;
+}
+
+.container-fluid{
+    color: #E6E6E6;
+    border-bottom: 1px solid;
+    
+}
+
+.link-geracao:hover {
+    color: white;
+    font-weight: bold;
+    background-color: orange;
 }

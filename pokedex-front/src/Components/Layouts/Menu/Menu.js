@@ -34,11 +34,11 @@ function Menu() {
                                 Gerações
                             </Link>
                             <div className="dropdown-menu text-center">
-                                <Link to={'#'} className="nav-link text-muted font-weight-bold">Todos os pokemon</Link>
-                                <Link to={'#'} className="nav-link text-muted font-weight-bold">1º Geração</Link>
-                                <Link to={'#'} className="nav-link text-muted font-weight-bold">2º Geração</Link>
-                                <Link to={'#'} className="nav-link text-muted font-weight-bold">3º Geração</Link>
-                                <Link to={'#'} className="nav-link text-muted font-weight-bold">4º Geração</Link>
+                                <Link to={'#'} className="link-geracao nav-link text-muted font-weight-bold">Todos os pokemon</Link>
+                                <Link to={'#'} className="link-geracao nav-link text-muted font-weight-bold">1º Geração</Link>
+                                <Link to={'#'} className="link-geracao nav-link text-muted font-weight-bold">2º Geração</Link>
+                                <Link to={'#'} className="link-geracao nav-link text-muted font-weight-bold">3º Geração</Link>
+                                <Link to={'#'} className="link-geracao nav-link text-muted font-weight-bold">4º Geração</Link>
                             </div>
                         </li>
                     </ul>
